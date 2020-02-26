@@ -11,6 +11,7 @@ public class PlayerPowers : MonoBehaviour
     [SerializeField] float jumpForce;
     [SerializeField] bool canJump;
     [SerializeField] const float fallModifier = 1.15f;
+    bool isGoingRight = true;
     
     void Start()
     {
@@ -34,14 +35,28 @@ public class PlayerPowers : MonoBehaviour
         else if (Input.GetButtonDown("YellowPower"))
         {
             YellowPower();
+            if (isGoingRight)
+            {
+                isGoingRight = false;
+            }
+            
+            else if (!isGoingRight)
+            {
+                isGoingRight = true;
+            }
         }
-        
-        else if (Input.GetButtonDown("RedPower"))
-        {
-            RedPower();
-        }
-        
+
         FallingModifier();
+
+        if (body.velocity.x < 5 && isGoingRight)
+        {
+            body.velocity = new Vector2(5, body.velocity.y);
+        }
+        
+        else if (body.velocity.x > -5 && !isGoingRight)
+        {
+            body.velocity = new Vector2(-5, body.velocity.y);
+        }
     }
 
     void GreenPower()
@@ -63,11 +78,6 @@ public class PlayerPowers : MonoBehaviour
     {
         direction = new Vector2(body.velocity.x * -1, body.velocity.y);
         body.velocity = direction;
-    }
-    
-    void RedPower()
-    {
-        
     }
 
 
