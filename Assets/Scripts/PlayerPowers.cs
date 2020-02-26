@@ -61,7 +61,8 @@ public class PlayerPowers : MonoBehaviour
     
     void YellowPower()
     {
-        
+        direction = new Vector2(body.velocity.x * -1, body.velocity.y);
+        body.velocity = direction;
     }
     
     void RedPower()
