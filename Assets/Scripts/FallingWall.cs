@@ -20,7 +20,15 @@ public class FallingWall : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            rigidBody.bodyType = RigidbodyType2D.Dynamic;
+            rigidBody.GetComponentInChildren<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            rigidBody.bodyType = RigidbodyType2D.Static;
         }
     }
 }
