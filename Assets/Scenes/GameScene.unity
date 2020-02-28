@@ -956,6 +956,7 @@ GameObject:
   - component: {fileID: 2051549390}
   - component: {fileID: 2051549389}
   - component: {fileID: 2051549388}
+  - component: {fileID: 2051549387}
   m_Layer: 0
   m_Name: TriggerDeadZone
   m_TagString: Untagged
@@ -963,6 +964,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2051549387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051549386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41536997376bcc1489cb9d73d5dfd7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2051549388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1184,6 +1197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6439081748368061298, guid: 381f6ce5af4357347b87a5589b0f65e4, type: 3}
+    - {fileID: 1538906314, guid: 381f6ce5af4357347b87a5589b0f65e4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 381f6ce5af4357347b87a5589b0f65e4, type: 3}
 --- !u!1001 &6593223168706028500
 PrefabInstance:
