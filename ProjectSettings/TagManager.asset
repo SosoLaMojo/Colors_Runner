@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - DestructibleWall
+  - Victory
   layers:
   - Default
   - TransparentFX
